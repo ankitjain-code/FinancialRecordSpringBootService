@@ -1,0 +1,37 @@
+version: "3"
+services:
+  currency:
+    image: currencyms
+    environment: 
+      - eureka.client.serviceUrl.defaultZone=http://regserver:8761/eureka/
+    ports:
+      - "8100:8100"
+    networks:
+      - client-server
+    depends_on:
+      - regserver
+    links:
+      - regserver 
+      
+  forex:
+    image: forexms
+    environment: 
+      - eureka.client.serviceUrl.defaultZone=http://regserver:8761/eureka/
+    ports:
+      - "8000:8000"
+    networks:
+      - client-server
+    depends_on:
+      - regserver
+    links:
+      - regserver     
+ 
+  regserver:
+    image: eurekams
+    ports:
+      - "8761:8761"
+    networks:
+      - client-server 
+      
+networks:
+  client-server:

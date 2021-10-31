@@ -17,7 +17,7 @@ nav {
 }
 table, th, td {
   border: 1px solid black;
-  font-size: 20px;
+  font-size: 22px;
   font-family: 'Castoro', serif;
 
 }
@@ -67,7 +67,7 @@ h1, h3, h4, h5 {
   text-align: justify;
 }
 table {
-  padding: 3px;
+  padding: 4px;
 }
 
 p {

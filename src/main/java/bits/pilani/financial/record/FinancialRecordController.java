@@ -22,6 +22,21 @@ public class FinancialRecordController {
 		return paymentRecord.get();
 	}
 	
+@PostMapping("/payment")
+	public PaymentRecord savePaymentRecord(@RequestBody PaymentRecord paymentRecord) {
+		
+		PaymentRecord exchangeValue = repository.save(paymentRecord);	 
+
+		return exchangeValue;
+	}
+
 	
+	@GetMapping("/payment/list")
+	public List<PaymentRecord> changePaymentRecord() {
+		
+		List<PaymentRecord> exchangeValue =  new ArrayList<PaymentRecord>();
+		exchangeValue=(List<PaymentRecord>) repository.findAll();	 
+		return exchangeValue;
+	}	
 	
 }

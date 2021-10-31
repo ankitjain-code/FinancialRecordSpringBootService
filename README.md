@@ -39,4 +39,11 @@
 
     insert into payment_record(amount, currency) values(700,'INR');
 
+#CONTRIBUTORS
+
+	ANKIT JAIN
+	
+	AMANPREET SINGH
+	
+	ANKUR
 

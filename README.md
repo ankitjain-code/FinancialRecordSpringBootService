@@ -23,6 +23,8 @@
     logging.level.root	WARN
 
     spring.jpa.show-sql	true
+    
+    
 
     spring.h2.console.enabled	True
 
@@ -38,6 +40,13 @@
     insert into payment_record(amount, currency) values(550,'EUR');
 
     insert into payment_record(amount, currency) values(700,'INR');
+    
+    insert into payment_record(amount, currency) values(650,'INR');
+    
+    insert into payment_record(amount, currency) values(800,'INR');
+    
+    
+    
 
 #CONTRIBUTORS
 

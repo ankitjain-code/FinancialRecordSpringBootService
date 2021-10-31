@@ -37,6 +37,18 @@ public class FinancialRecordController {
 		List<PaymentRecord> exchangeValue =  new ArrayList<PaymentRecord>();
 		exchangeValue=(List<PaymentRecord>) repository.findAll();	 
 		return exchangeValue;
-	}	
+	}
+
+	@GetMapping("/payment/search/amount/{amount}")
+	public PaymentRecord findPaymentRecordByAmount(@PathVariable Float amount) {
+		Optional<PaymentRecord> paymentRecord = repository.findByAmount(amount);
+		return paymentRecord.get();
+	}
+
+	@GetMapping("/payment/search/currency/{currency}")
+	public List<PaymentRecord> findPaymentRecordByCurr(@PathVariable String currency) {
+		List<PaymentRecord> paymentRecord = repository.findByCurrency(currency);
+		return paymentRecord;
+	}
 	
 }

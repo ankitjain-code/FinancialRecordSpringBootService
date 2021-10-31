@@ -15,6 +15,7 @@
 
 
 #APPLICATION PROPERTIES
+    
     spring.application.name	financial-record-service
 
     server.port	8080
@@ -27,6 +28,7 @@
 
 
 #DATABASE
+    
     insert into payment_record(amount, currency) values(250,'USD');
 
     insert into payment_record(amount, currency) values(350,'INR');
